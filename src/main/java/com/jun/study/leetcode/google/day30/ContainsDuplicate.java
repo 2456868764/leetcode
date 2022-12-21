@@ -3,6 +3,10 @@ package com.jun.study.leetcode.google.day30;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * easy
+ * https://leetcode.com/problems/contains-duplicate
+ */
 public class ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
