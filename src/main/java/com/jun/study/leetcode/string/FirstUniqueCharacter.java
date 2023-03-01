@@ -3,6 +3,10 @@ package com.jun.study.leetcode.string;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/**
+ * easy  https://leetcode.cn/problems/first-unique-character-in-a-string/
+ */
 public class FirstUniqueCharacter {
 
     public int firstUniqChar(String s) {
@@ -16,8 +20,9 @@ public class FirstUniqueCharacter {
             }
         }
         return -1;
-
     }
+
+
 
     public static void main(String[] args) {
         String s = "loveleetcode";
