@@ -10,6 +10,11 @@
 | 387    | 字符串中的第一个唯一字符                 | 简单      | https://leetcode.cn/problems/first-unique-character-in-a-string/                                                                                                                                                        |
 | 8      | 字符串转换整数 (atoi)                  | 中等      | https://leetcode.cn/problems/string-to-integer-atoi/                                                                                                                                                        |
 
+- 字符串操作问题
+
+| ID     | 名称                                 | 难度      | URL                                                                                                                                          |
+| ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
+| 14     | 最长公共前缀                         | 简单      | https://leetcode.cn/problems/longest-common-prefix/                                                                                                                                                       |
 
 
 
