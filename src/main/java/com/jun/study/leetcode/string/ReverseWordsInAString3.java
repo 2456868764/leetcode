@@ -9,7 +9,7 @@ public class ReverseWordsInAString3 {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < words.length; i++) {
             char[] chs = words[i].toCharArray();
-            for (int j = 0, p = chs.length - 1; i < p ; j++, p--) {
+            for (int j = 0, p = chs.length - 1; j < p ; j++, p--) {
                 char ch = chs[j];
                 chs[j] = chs[p];
                 chs[p] = ch;
