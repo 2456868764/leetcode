@@ -21,6 +21,13 @@
 | 557    | 反转字符串中的单词 III                | 简单      | https://leetcode.cn/problems/reverse-words-in-a-string-iii/                                                                                                                                                   |
 | 917    | 仅仅反转字母                         | 简单      | https://leetcode.cn/problems/reverse-only-letters/                                                                                                                                                   |
 
+- 异位词问题
+
+| ID     | 名称                                 | 难度      | URL                                                                                                                                          |
+| ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
+| 242    | 有效的字母异位词                       | 简单      | https://leetcode.cn/problems/valid-anagram/                                                                                                                                                       |
+
+- 回文串问题
 
 
 # reference
