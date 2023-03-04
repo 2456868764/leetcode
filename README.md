@@ -1,5 +1,33 @@
 
 # 字符串
+
+- 常用代码
+
+```shell
+
+String.trim()
+String.split()
+String.length()
+String.chatAt()
+String.toCharArray()
+String.join()
+String.substring()
+String.indexOf()
+String.toLowerCase()
+String.toUpperCase()
+String.replace()
+String.equals()
+Stirng.equalsIgnoreCase()
+String.startWith()
+String.endWith()
+String.contain()
+
+Character.isLetter()
+Character.isDigit()
+Character.isLetterOrDigit()
+
+```
+
 - 字符串基础问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
