@@ -1,10 +1,11 @@
 package com.jun.study.leetcode.string;
 
 /**
- * https://leetcode.cn/problems/longest-palindromic-substring/
+ * medium: https://leetcode.cn/problems/longest-palindromic-substring/
  */
 
 public class LongestPalindromicSubstring {
+
     public static String longestPalindrome(String s) {
         int len = s.length();
         if (len <= 1) {
@@ -14,6 +15,7 @@ public class LongestPalindromicSubstring {
         int maxLen = 0;
         int startPos = 0;
         int endPos = 0;
+
         for (int i = 1; i < len-1; i++) {
             int left = i-1, right = i+1;
             while(left >=0 && right < len){

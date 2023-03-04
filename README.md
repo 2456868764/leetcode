@@ -35,7 +35,9 @@
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
 | 125    | 验证回文串                            | 简单      | https://leetcode.cn/problems/valid-palindrome/                                                                                                                                                      |
-| 680    | 验证回文串 II                            | 简单      | https://leetcode.cn/problems/valid-palindrome-ii/                                                                                                                                                    |
+| 680    | 验证回文串 II                         | 简单      | https://leetcode.cn/problems/valid-palindrome-ii/                                                                                                                                                    |
+| 5      | 最长回文子串                           | 简单      | https://leetcode.cn/problems/longest-palindromic-substring/                                                                                                                                                    |
+
 
 
 
