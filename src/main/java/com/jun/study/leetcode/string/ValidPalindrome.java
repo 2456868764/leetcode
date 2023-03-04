@@ -1,7 +1,8 @@
 package com.jun.study.leetcode.string;
 
-import com.google.common.base.Strings;
-
+/**
+ * easy: https://leetcode.cn/problems/valid-palindrome/
+ */
 public class ValidPalindrome {
 
     public static boolean isPalindrome(String s) {
