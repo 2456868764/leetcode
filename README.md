@@ -4,7 +4,7 @@
 - 常用代码
 
 ```shell
-
+String.length()
 String.trim()
 String.split()
 String.length()
@@ -25,6 +25,8 @@ String.contain()
 Character.isLetter()
 Character.isDigit()
 Character.isLetterOrDigit()
+
+StringBuilder
 
 ```
 
