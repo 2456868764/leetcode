@@ -1,7 +1,7 @@
 
 # 字符串
 
-- 常用代码
+## 常用代码
 
 ```shell
 String.length()
@@ -30,7 +30,7 @@ StringBuilder
 
 ```
 
-- 字符串基础问题
+## 字符串基础问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ StringBuilder
 | 387    | 字符串中的第一个唯一字符                 | 简单      | https://leetcode.cn/problems/first-unique-character-in-a-string/                                                                                                                                                        |
 | 8      | 字符串转换整数 (atoi)                  | 中等      | https://leetcode.cn/problems/string-to-integer-atoi/                                                                                                                                                        |
 
-- 字符串操作问题
+## 字符串操作问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ StringBuilder
 | 557    | 反转字符串中的单词 III                | 简单      | https://leetcode.cn/problems/reverse-words-in-a-string-iii/                                                                                                                                                   |
 | 917    | 仅仅反转字母                         | 简单      | https://leetcode.cn/problems/reverse-only-letters/                                                                                                                                                   |
 
-- 异位词问题
+## 异位词问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ StringBuilder
 | 438    | 找到字符串中所有字母异位词               | 中等      | https://leetcode.cn/problems/find-all-anagrams-in-a-string/                                                                                                                                                       |
 
 
-- 回文串问题
+## 回文串问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -68,13 +68,13 @@ StringBuilder
 | 680    | 验证回文串 II                         | 简单      | https://leetcode.cn/problems/valid-palindrome-ii/                                                                                                                                                    |
 | 5      | 最长回文子串                           | 中等      | https://leetcode.cn/problems/longest-palindromic-substring/                                                                                                                                                    |
 
-- 最长子串、子序列问题
+## 最长子串、子序列问题
 
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
 | 1143    | 最长公共子序列                          | 中等      | https://leetcode.cn/problems/longest-common-subsequence/                                                                                                                                                      |
 
-## 1143. 最长公共子序列
+### 1143. 最长公共子序列
 
 最长公共子序列（Longest Common Subsequence，简称 LCS）是一道非常经典的面试题目，因为它的解法是典型的二维动态规划，大部分比较困难的字符串问题都和这个问题一个套路，比如说编辑距离。而且，这个算法稍加改造就可以用于解决其他问题，所以说 LCS 算法是值得掌握的。
 
@@ -145,17 +145,17 @@ public class LongestCommonSubsequence {
 
 ```
 
-- reference
+4. reference
 * https://leetcode.cn/problems/longest-common-subsequence/solution/dong-tai-gui-hua-zhi-zui-chang-gong-gong-zi-xu-lie/
 * https://leetcode.cn/problems/longest-common-subsequence/solution/dong-tai-gui-hua-tu-wen-jie-xi-by-yijiaoqian/
 
 
 
-- 字符串 + DP 问题
+## 字符串 + DP 问题
 
 
 
-# reference
+## reference
 * https://xiaochen1024.com/series/6196129fc1553b002e57bef5
 * https://gitee.com/Doocs/leetcode
 
