@@ -73,6 +73,7 @@ StringBuilder
 | ID     | 名称                                 | 难度      | URL                                                                                                                                          |
 | ------ | ----------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------|
 | 1143    | 最长公共子序列                          | 中等      | https://leetcode.cn/problems/longest-common-subsequence/                                                                                                                                                      |
+| 72    | 编辑距离                          | 困难      | https://leetcode.cn/problems/edit-distance/                                                                                                                                                     |
 
 ### 1143. 最长公共子序列
 
@@ -144,11 +145,94 @@ public class LongestCommonSubsequence {
 }
 
 ```
+### 72. 编辑距离
+
+动态规划：
+
+dp[i][j] 代表 word1 到 i 位置转换成 word2 到 j 位置需要最少步数
+
+所以，
+
+- 当 word1[i] == word2[j]，dp[i][j] = dp[i-1][j-1]；
+
+- 当 word1[i] != word2[j]，dp[i][j] = min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1]) + 1
+
+其中，dp[i-1][j-1] 表示替换操作，dp[i-1][j] 表示删除操作，dp[i][j-1] 表示插入操作。
+
+注意，针对第一行，第一列要单独考虑，我们引入 '' 下图所示：
+
+![img](./images/img3.png)
+
+第一行，是 word1 为空变成 word2 最少步数，就是插入操作
+
+第一列，是 word2 为空，需要的最少步数，就是删除操作
+
+其中，对dp[i-1][j-1] 表示替换操作，dp[i-1][j] 表示删除操作，dp[i][j-1] 表示插入操作 理解如下：
+
+- 当word1[i]==word2[j]时,由于遍历到了i和j,说明word1的0~i-1和word2的0~j-1的匹配结果已经生成,
+由于当前两个字符相同,因此无需做任何操作,dp[i][j]=dp[i-1][j-1]
+
+- 当word1[i]!=word2[j]时,可以进行的操作有3个:
+  * 替换操作:可能word1的0~i-1位置与word2的0~j-1位置的字符都相同,
+  只是当前位置的字符不匹配,进行替换操作后两者变得相同,
+  所以此时dp[i][j]=dp[i-1][j-1]+1(这个加1代表执行替换操作)
+
+  * 删除操作:若此时word1的0~i-1位置与word2的0~j位置已经匹配了,
+此时多出了word1的i位置字符,应把它删除掉,才能使此时word1的0~i(这个i是执行了删除操作后新的i)
+和word2的0~j位置匹配,因此此时dp[i][j]=dp[i-1][j]+1(这个加1代表执行删除操作)
+
+  * 插入操作:若此时word1的0~i位置只是和word2的0~j-1位置匹配,
+此时只需要在原来的i位置后面插入一个和word2的j位置相同的字符使得
+此时的word1的0~i(这个i是执行了插入操作后新的i)和word2的0~j匹配得上,
+所以此时dp[i][j]=dp[i][j-1]+1(这个加1代表执行插入操作)
+
+  * 由于题目所要求的是要最少的操作数:所以当word1[i] != word2[j] 时,
+需要在这三个操作中选取一个最小的值赋格当前的dp[i][j]
+- 总结:状态方程为:
+```shell
+if(word1[i] == word2[j]):
+dp[i][j] = dp[i-1][j-1]
+else:
+min(dp[i-1][j-1],dp[i-1][j],dp[i][j-1])+1
+
+```
+
+参考代码
+```java
+ public int minDistance(String word1, String word2) {
+
+        int row = word1.length();
+        int col = word2.length();
+        int[][] dp = new int[row+1][col+1];
+
+        for (int i = 1; i <= col; i++) {
+            dp[0][i] = i;
+        }
+        for (int j = 1; j <= row; j++) {
+            dp[j][0] = j;
+        }
+
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= col; j++) {
+                if (word1.charAt(i-1) == word2.charAt(j-1)) {
+                    dp[i][j] = dp[i-1][j-1];
+                } else {
+                    dp[i][j] = Math.min(Math.min(dp[i-1][j-1],dp[i-1][j]), dp[i][j-1])+1;
+                }
+            }
+        }
+
+        return dp[row][col];
+    }
+
+```
+
+
 
 4. reference
 * https://leetcode.cn/problems/longest-common-subsequence/solution/dong-tai-gui-hua-zhi-zui-chang-gong-gong-zi-xu-lie/
 * https://leetcode.cn/problems/longest-common-subsequence/solution/dong-tai-gui-hua-tu-wen-jie-xi-by-yijiaoqian/
-
+* https://leetcode.cn/problems/edit-distance/solution/zi-di-xiang-shang-he-zi-ding-xiang-xia-by-powcai-3/
 
 
 ## 字符串 + DP 问题
